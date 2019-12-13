@@ -4,28 +4,26 @@ import Video from 'react-native-video';
 
 const VideoPlayer = () => {
   return (
-    <View style={styles.container}>
-      <ScrollView>
-        <View style={styles.text}>
-          <Text>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </Text>
-        </View>
-        <View style={styles.videoContainer}>
-          <Video
-            source={{uri: 'file:///storage/emulated/0/bunny.mp4'}}
-            style={styles.backgroundVideo}
-            controls
-          />
-        </View>
-
+    <ScrollView style={styles.container}>
+      <View style={styles.text}>
         <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </Text>
-      </ScrollView>
-    </View>
+      </View>
+      <View style={styles.videoContainer}>
+        <Video
+          source={{uri: 'file:///storage/emulated/0/bunny.mp4'}}
+          style={styles.backgroundVideo}
+          controls
+        />
+      </View>
+
+      <Text>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
+      </Text>
+    </ScrollView>
   );
 };
 
@@ -39,6 +37,7 @@ var styles = StyleSheet.create({
   },
   container: {
     padding: 15,
+    flex: 1,
   },
   backgroundVideo: {
     position: 'absolute',

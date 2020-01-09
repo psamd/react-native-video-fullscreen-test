@@ -1,23 +1,21 @@
 import React from 'react';
-import {StyleSheet, View, Text, ScrollView} from 'react-native';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import Video from 'react-native-video';
 
 const VideoPlayer = () => {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.text}>
         <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </Text>
       </View>
-      <View style={styles.videoContainer}>
-        <Video
-          source={{uri: 'file:///storage/emulated/0/bunny.mp4'}}
-          style={styles.backgroundVideo}
-          controls
-        />
-      </View>
+      <Video
+        source={{ uri: 'https://github.com/mediaelement/mediaelement-files/raw/master/big_buck_bunny.mp4' }}
+        style={styles.videoContainer}
+        controls
+      />
 
       <Text>
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -46,5 +44,5 @@ var styles = StyleSheet.create({
     bottom: 0,
     right: 0,
   },
-  videoContainer: {width: 300, height: 300 * (9 / 16), padding: 15},
+  videoContainer: { width: 300, height: 300 * (9 / 16), padding: 15 },
 });
